@@ -64,7 +64,7 @@ fn handle_column_iteration(record: StringRecord, result: &mut Vec<Vec<String>>, 
             None => panic!("Bad input column")
         };
 
-        columns.push(cell.to_string());
+        columns.push(format!(r#""{}""#, cell));
     }
 
     result.push(columns);
